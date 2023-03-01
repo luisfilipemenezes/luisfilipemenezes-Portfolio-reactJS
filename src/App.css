@@ -1,0 +1,66 @@
+.imgBack{
+    background-image: url('./img/img.jpg');
+}
+
+.insta{
+    background-image: url('./img/linkedin.png');
+}
+
+.bgColorSegPag{
+    background-color: rgba(54,54,54,255);
+}
+
+.letterspacing{
+    letter-spacing: 5.5px;
+}
+
+.rodape{
+    background-image: url('./img/rodape.png');
+}
+
+.transparencia{
+    background-color: rgba(54,54,54,0.6);
+    border-bottom: solid white 1px;
+}
+
+.pad-top{
+    padding-top: 24vh;
+}
+
+.pad-top-seg{
+    padding-top: 16.5vh;
+}
+
+.margin-top{
+    margin-top: 10vh;
+}
+
+.width-linke{
+    width: 50px;
+}
+
+.height-linke{
+    height: 50px;
+}
+
+.flex-seg-text{
+    flex: 1;
+}
+
+.flex-seg-img{
+    flex: 1;
+}
+
+.m-top-seg-img{
+    margin-bottom: 10vh;
+}
+
+.sizeLeft{
+    max-width: 50px;
+    max-height: 50px;
+}
+
+.sizeHover{
+    width: 70px;
+    height: 70px;
+}
