@@ -1,31 +1,30 @@
 import { useState } from 'react'
 import './App.css'
-import {GetImageCenter,GetImageLeft,GetImageRight} from  './Help/index'
+import {GetImageCenter,GetImageLeft,GetImageRight, GetImgNav,GetImgGmail} from  './Help/index'
 
 function App() {
+
   const [count, setCount] = useState(0)
 
   function changeMore(){
-    if (count<1){
-      setCount(count+1)
-    }
+    count<1?setCount(count+1):setCount(0)
   }
 
   function changeLess() {
-    if (count>0){
-      setCount(count-1)
-    }
+    count>0?setCount(count-1):setCount(1)
   }
 
-  
 
   return (
     <div className=' text-slate-50 font-sans tracking-wider'>
       <div className=' w-full h-screen imgBack   bg-no-repeat bg-cover '>
         <div className='w-full h-1/6 flex transparencia fixed '>
-          <header className='w-5/6  h-1/6  flex  m-auto items-center  text-lg padFirstLeft '>
-            <div className='flex-1 flex items-center h-2/4 '>
-              <ul className='flex w-full  items-center'>
+          <header className='w-5/6  h-1/6  flex  m-auto items-center  md:text-lg padFirstLeft '>
+            <div className='flex-1  flex items-center h-2/4  '>
+              <div className='w-10 md:hidden '>
+                <GetImgNav/>
+              </div>
+              <ul className='flex w-full  items-center hidden md:flex'>
                 <li className='flex rounded-lg flex-1 hover:bg-stone-500 active:bg-stone-600 focus:outline-none focus:ring ease-in duration-300  shadow-lg hover:shadow-gray-800'>
                   <a className=' m-auto' href="">HOME</a>
                 </li>
@@ -41,18 +40,19 @@ function App() {
               </ul>
             </div>
             <div className='flex-1 flex justify-end'>
-              <p className='rounded active:bg-stone-600 focus:outline-none focus:ring ease-in duration-300  shadow-lg hover:shadow-gray-800'>LUIS FILIPE</p>
+              <p className='text-xs md:text-lg rounded active:bg-stone-600 focus:outline-none focus:ring ease-in duration-300  shadow-lg hover:shadow-gray-800'>
+                +55 (83) 99929-1308</p>
             </div>
           </header>
           </div>  
 
-        <div className='h-4/6 w-5/6  flex flex-col m-auto pad-top'>
-          <div className='flex-1 flex flex-col justify-end  ml-20'>
-            <h2 className='text-6xl font-medium tracking-wide'>LUIS</h2>
-            <h1 className='text-7xl font-extrabold tracking-wide'>FILIPE</h1>
-            <p className='text-2xl font-light letterspacing'>Web Developer</p>
+        <div className='h-4/6 w-5/6  flex flex-col m-auto pad-top '>
+          <div className='flex-1 flex flex-col justify-end m-0 lg:ml-20'>
+            <h2 className=' md:text-6xl text-3xl font-medium tracking-wide'>LUIS</h2>
+            <h1 className='md:text-7xl text-5xl font-extrabold tracking-wide'>FILIPE</h1>
+            <p className='md:text-2xl font-lightletterspacing'>Web Developer</p>
           </div> 
-          <div className='flex-1  ml-20 mt-10 '>
+          <div className='flex-1 m-0 lg:ml-20 mt-10 '>
             <button className='rounded-lg hover:bg-stone-500 active:bg-stone-600 focus:outline-none focus:ring ease-in duration-300  shadow-lg hover:shadow-gray-800 border-2 rounded-2xl mr-10 w-28 font-light tracking-wide'>
               Resume
             </button>
@@ -68,31 +68,36 @@ function App() {
             </div>
             </div>
           <div className='flex flex-1 justify-end items-center  '>
-            <div className='rodape width-linke height-linke bg-cover  bg-no-repeat bg-contain' ></div>
+            <div className='w-14 md:hidden'>
+            <GetImgGmail/>
+              </div>
+            <p className='hidden md:flex text-lg  letterspacing rounded-lg hover:bg-stone-500 active:bg-stone-600 focus:outline-none focus:ring ease-in duration-300  shadow-lg hover:shadow-gray-800'>
+              luisfilipeemenezes@gmail.com
+            </p>
           </div>
         </div>
       </div>
       <div>
         <div className=' w-full h-screen bgColorSegPag  bg-no-repeat bg-cover flex '>
           <div className='flex flex-col h-full w-5/6  m-auto pad-top-seg'>
-            <div className='flex-seg-text  flex'>
-              <p className='text-2xl m-auto text-center font-light'>
-              Sou estudante de Sistemas de Informação e atualmente estou cursando o 5º período no Centro Universitário Unifacisa, busco meu primeiro emprego no setor de TI como desenvolvedor.
+            <div className='flex-seg-text md:flex-1 flex flex05'>
+              <p className='md:text-2xl m-auto md:text-center text-justify font-light'>
+              Estudante de Sistemas de Informação , atualmente  cursando o 5º período no Centro Universitário Unifacisa e em busca do primeiro emprego no setor de TI como desenvolvedor.
               </p>
             </div>
             <div className='flex-seg-img   m-top-seg-img flex '>
-              <div className='flex-1 flex items-center justify-end mr-10' >
+              <div className='flex-1 hidden md:flex  items-center justify-end mr-10' >
                 <div className='sizeHover  flex rounded-lg flex-1 hover:bg-stone-500 active:bg-stone-600 focus:outline-none focus:ring ease-in duration-300  shadow-lg hover:shadow-gray-800'>
-                  <div className='m-auto sizeLeft flex ' onClick={changeLess} >
+                  <div className='m-auto sizeLeft flex  ' onClick={changeLess} >
                   <GetImageLeft />
                   </div>
                 </div>
               </div>
-              <div className=' w-1/2 m-auto flex m-auto bg-no-repeat bg-cover '>
-                <GetImageCenter value={count} />
+              <div className=' md:w-1/2 w-full m-auto flex m-auto bg-no-repeat bg-cover ' onClick={changeMore}>
+                <GetImageCenter value={count}  />
                 
               </div>
-              <div className='flex-1 flex items-center justify-start ml-10'>
+              <div className='flex-1 hidden md:flex items-center justify-start ml-10'>
                 <div className='sizeHover  flex rounded-lg flex-1 hover:bg-stone-500 active:bg-stone-600 focus:outline-none focus:ring ease-in duration-300  shadow-lg hover:shadow-gray-800'>
                   <div className='m-auto sizeLeft flex' onClick={changeMore}>
                   <GetImageRight/>

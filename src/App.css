@@ -55,6 +55,8 @@
     margin-bottom: 10vh;
 }
 
+
+
 .sizeLeft{
     max-width: 50px;
     max-height: 50px;
@@ -63,4 +65,18 @@
 .sizeHover{
     width: 70px;
     height: 70px;
+}
+
+.transitionImg{
+    transition: 1000ms;
+}
+
+@media(max-width:720px){
+    .flex05{
+        flex:0.6;
+    }
+
+    .m-top-seg-img {
+        margin-bottom: 20vh;
+    }
 }

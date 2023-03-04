@@ -2,6 +2,8 @@ import IMC from '../img/IMC.png'
 import MED from '../img/medcenter3.png'
 import LEFT from '../img/left.png'
 import RIGHT from '../img/right.png'
+import NAV from '../img/nav.png'
+import GMAIL from '../img/gmail.png'
 import '../App.css'
 
 
@@ -12,7 +14,22 @@ type Props = {
 const arrayImg = [IMC,MED]
 let img
 
+export function GetImgNav() {
+    return(
+    <div >
+        <img src={NAV} alt="" />
+    </div>
+    )
+    
+}
 
+export function GetImgGmail() {
+    return(
+        <div>
+            <img src={GMAIL} alt="" />
+        </div>
+    )
+}
 
 export function GetImageCenter({value}:Props){
     if(value <3){
@@ -20,10 +37,8 @@ export function GetImageCenter({value}:Props){
     }else{
         img=arrayImg[1]
     }
-    console.log(value);
-    
     return (
-        <div>
+        <div className='transitionImg'>
             <img src={img} alt="" />
         </div>
         
