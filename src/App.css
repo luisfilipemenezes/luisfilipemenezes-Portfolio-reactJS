@@ -79,4 +79,11 @@
     .m-top-seg-img {
         margin-bottom: 20vh;
     }
+
+    .letterspacing{
+        letter-spacing: 3.5px;
+    }
+    li{
+        margin-bottom: 15px;
+    }
 }
