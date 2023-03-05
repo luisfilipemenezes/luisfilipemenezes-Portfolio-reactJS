@@ -23,10 +23,10 @@ function App() {
   return (
     <div className=' text-slate-50 font-sans tracking-wider'>
       <div className=' w-full h-screen imgBack   bg-no-repeat bg-cover '>
-        {header? <div className='w-full h-1/4  flex transparencia fixed '>
-        <div className='w-full  h-1/4 flex transparencia fixed '> 
-              <header  className='w-5/6  h-1/4  flex  m-auto items-center  md:text-lg padFirstLeft '>
-                <div className='flex-1 flex items-center h-1/4  '>
+        {header? <div className='w-full h-1/3  flex transparencia fixed '>
+        <div className='w-full  h-1/3 flex transparencia fixed '> 
+              <header  className='w-5/6  h-1/3  flex  m-auto items-center  md:text-lg padFirstLeft '>
+                <div className='flex-1 flex items-center h-1/3  '>
                   <ul className=' w-full  items-center  md:flex'>
                     <li className='flex rounded-lg flex-1 hover:bg-stone-500 active:bg-stone-600 focus:outline-none focus:ring ease-in duration-300  shadow-lg hover:shadow-gray-800'>
                       <a className=' m-auto' href="">HOME</a>
@@ -70,7 +70,7 @@ function App() {
                   </ul>
                 </div>
                 <div className='flex-1 flex justify-end'>
-                  <p className='text-base md:text-lg rounded active:bg-stone-600 focus:outline-none focus:ring ease-in duration-300  shadow-lg hover:shadow-gray-800'>
+                  <p className='text-sm md:text-lg rounded active:bg-stone-600 focus:outline-none focus:ring ease-in duration-300  shadow-lg hover:shadow-gray-800'>
                     +55 (83) 99929-1308</p>
                 </div>
               </header>
